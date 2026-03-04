@@ -6,7 +6,7 @@ def matrix_inverse(A):
     """
     # Write code here
     A = np.asarray(A)
-    if (np.size(A.shape) != 2 or np.linalg.det(A) == 0 or A.shape[0] != A.shape[1]):
+    if (A.ndim != 2 or np.linalg.det(A) == 0 or A.shape[0] != A.shape[1]):
         return None
     return np.linalg.inv(A)
     pass
